@@ -91,8 +91,8 @@ function makeWave(pos, transX, freq, amp){
     return d
 }
 document.querySelector('#upper1').setAttribute("d", makeWave({x:0, y:85},0, 0.03,  65))
-// document.querySelector('#upper2').setAttribute("d", makeWave({x:105, y:85},0, 0.03, 65))
-// document.querySelector('#lower1').setAttribute("d", makeWave({x:0, y:215},0, 0.03, 65))
+document.querySelector('#upper2').setAttribute("d", makeWave({x:105, y:85},0, 0.03, 65))
+document.querySelector('#lower1').setAttribute("d", makeWave({x:0, y:215},0, 0.03, 65))
 document.querySelector('#lower2').setAttribute("d", makeWave({x:105, y:215},0, 0.03, 65))
 
 document.querySelector('#cycle1').setAttribute("d", makeWave({x:50, y:150},0, 0.015, 130))
