@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>rb</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <link rel="stylesheet" href="default.css"/>
+    <link rel="stylesheet" href="cards.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js" integrity="sha512-K9tDZvc8nQXR1DMuT97sct9f40dilGp97vx7EXjswJA+/mKqJZ8vcZLifZDP+9t08osMLuiIjd4jZ0SM011Q+w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="render.js" defer></script>
+  </head>
+
+  <body>
+    <nav>
+        <a href="#introduction" class="current">0 / introduction</a>
+        <a href="#content">1 / content</a>
+        <a href="#contact">2 / contact</a>
+    </nav>
+    <article id="introduction" class="divided">
+        
+        <div>
+            <h2>Alter. PAM3 Solution</h2>
+            <i>electronics / pulse amplitude modulation</i>
+            <div id="test"></div>
+        </div>
+        
+        <div class="card">
+            <svg viewBox="0 0 400 400">
+            <defs>
+                <filter id="glow">
+                    <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+                    <feMerge>
+                        <feMergeNode in="coloredBlur"/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+            </defs>
+            <circle class="wire pulse" cx="370" cy="60" r="3"/>
+            <circle class="wire pulse" style="animation-delay:0.4s" cx="380" cy="60" r="3"/>
+
+            <rect class="wire pulse" x="175" y="175" rx="8px" ry="8px" height="50" width="50"/>
+            <circle class="wire" cx="190" cy="170" r="3"/>
+            <path class="wire" d="M 190,166
+                L 190,104
+                L 170,90
+            "/>
+            <circle class="wire" cx="168" cy="90" r="3"/>
+            <circle class="wire" cx="158" cy="90" r="3"/>
+            <circle class="wire" cx="148" cy="90" r="3"/>
+            <circle class="wire" cx="138" cy="90" r="3"/>
+
+            <circle class="wire" cx="200" cy="170" r="3"/>
+            <circle class="wire" cx="210" cy="170" r="3"/>
+            <circle class="wire" cx="170" cy="190" r="3"/>
+            <circle class="wire" cx="170" cy="200" r="3"/>
+            <circle class="wire" cx="170" cy="210" r="3"/>
+            <circle class="wire" cx="190" cy="230" r="3"/>
+            <circle class="wire" cx="200" cy="230" r="3"/>
+            <circle class="wire" cx="210" cy="230" r="3"/>
+            <circle class="wire" cx="230" cy="190" r="3"/>
+            <circle class="wire" cx="230" cy="200" r="3"/>
+            <circle class="wire" cx="230" cy="210" r="3"/>
+
+            <rect class="wire" x="20" y="220" rx="4px" ry="4px" height="14" width="30"/>
+            <path class="wire" d="M 30,234
+                L 30,250
+            "/>
+            <path class="wire" d="M 40,234
+                L 40,250
+            "/>
+            <rect class="wire" x="20" y="250" rx="4px" ry="4px" height="14" width="30"/>
+            <path class="wire" d="M 28,264
+                L 28,274
+                L 34,278
+                L 34,290
+            "/>
+            <path class="wire" transform="translate(8,0)" d="M 28,264
+                L 28,274
+                L 34,278
+                L 34,290
+            "/>
+            <rect class="wire" x="20" y="290" rx="4px" ry="4px" height="14" width="30"/>
+            <path class="wire" transform="translate(0,70)" d="M 30,234
+                L 30,250
+            "/>
+            <path class="wire" transform="translate(0,70)" d="M 40,234
+                L 40,250
+            "/>
+
+            <circle class="wire" cx="120" cy="240" r="3"/>
+            <circle class="wire" cx="110" cy="240" r="3"/>
+            <circle class="wire" cx="100" cy="240" r="3"/>
+            <circle class="wire" transform="translate(0,10)" cx="120" cy="240" r="3"/>
+            <circle class="wire" transform="translate(0,10)" cx="110" cy="240" r="3"/>
+            <circle class="wire" transform="translate(0,10)" cx="100" cy="240" r="3"/>
+            <circle class="wire" transform="translate(0,20)" cx="120" cy="240" r="3"/>
+            <circle class="wire" transform="translate(0,20)" cx="110" cy="240" r="3"/>
+            <circle class="wire" transform="translate(0,20)" cx="100" cy="240" r="3"/>
+
+
+            <rect class="wire" x="20" y="320" rx="4px" ry="4px" height="14" width="30"/>
+            <path class="wire target2" d="M 38,334
+                L 50,340
+                L 150,340
+                L 150,330
+                L 154,330
+                L 154,350
+                L 158,350
+                L 158,330
+                L 162,330
+                L 162,350
+                L 166,350
+                L 166,330
+                L 170,330
+                L 170,350
+                L 174,350
+                L 174,330
+                L 178,330
+                L 178,350
+                L 182,350
+                L 182,330
+                L 186,330
+                L 186,350
+                L 190,350
+                L 190,340
+                L 300,340
+                L 322,330
+            "/>
+
+            <rect class="wire" x="350" y="300" rx="4px" ry="4px" height="30" width="14"/>
+            <path class="wire" d="M 350,320
+                L 335,318
+            "/>
+            <path class="wire" transform="translate(0,-8)" d="M 350,320
+                L 335,318
+            "/>
+            <rect class="wire" x="320" y="300" rx="4px" ry="4px" height="30" width="14"/>
+            <path class="wire" d="M 364,310
+                L 370,300
+                L 370,220
+                L 362,212
+            "/>
+            <path class="wire" d="M 352,212
+                L 362, 222
+                L 362, 282
+            "/>
+            <circle class="wire" cx="362" cy="284" r="3"/>
+            <path class="wire" transform="translate(-10,0)" d="M 352,212
+                L 362, 222
+                L 362, 262
+            "/>
+            <circle class="wire" transform="translate(-10,0)" cx="362" cy="264" r="3"/>
+            <path class="wire target" d="M 330,212
+                L 322, 232
+                L 252, 232
+                L 232, 212
+            "/>
+            <path class="wire" d="M 234,202
+                L 254, 222
+                L 264, 222
+            "/>
+            <circle class="wire" cx="266" cy="222" r="3"/>
+
+            <circle class="wire" cx="330" cy="210" r="3"/>
+            <circle class="wire" cx="340" cy="210" r="3"/>
+            <circle class="wire" cx="350" cy="210" r="3"/>
+            <circle class="wire" cx="360" cy="210" r="3"/>
+            <circle class="wire" cx="330" cy="200" r="3"/>
+            <circle class="wire" cx="340" cy="200" r="3"/>
+            <circle class="wire" cx="350" cy="200" r="3"/>
+            <circle class="wire" cx="360" cy="200" r="3"/>
+            <rect class="e" id="sig1"x="0" y="-2" rx="2px" ry="2px" height="3" width="7"/>
+            <rect class="e" id="sig2" x="0" y="-2" rx="2px" ry="2px" height="3" width="7"/>
+            
+        </svg>
+
+    </div>
+    </article>
+    <article id="content">
+        <div>
+            <div>
+                <h2>Concept</h2>
+                <i>16-wire Interleaved PAM-3</i>
+                <br><br>
+                PAM-3 ( 3-hot encoding using 16 wires) <br>
+                3 high + 10 neutral + 3 low <br>
+                <p>
+                    Different signals. The signal levels are compared with all other signals (15 other signals) and no VREF
+                    voltage is used to recover the signal. When a high signal transitions to neutral level, at the same time a
+                    neutral signal will transition to the high level.
+                </p>
+                <i> Calculation for the number of signatures for each ½ cycle. </i>
+                13! / (10! * 3!) = <span class="highlight">286 signatures</span> <br>
+                286 signatures: 8-bit data + 30 S-codes <br>
+            </div>
+            <br><br>
+
+        </div>
+        <div class="centerWrap">
+            <svg viewBox="0 0 600 300" width="600">
+                <text x="0" y="15" class="wire">2</text>
+                <text x="0" y="145" class="wire">10</text>
+                <text x="0" y="275" class="wire">2</text>
+                <line class="wire" x1="0" y1="20" x2="500" y2="20"/>
+                <line class="wire" x1="0" y1="150" x2="500" y2="150"/>
+                <line class="wire" x1="0" y1="280" x2="500" y2="280"/>
+                <path class="wire" d="M 0,0"/>
+                <path class="wire" id="upper1"></path>
+                <path class="wire" id="upper2"></path>
+                <path class="wire" id="lower1"></path>
+                <path class="wire" id="lower2"></path>
+                <path class="wire" id="cycle1"></path>
+                <path class="wire" id="cycle2"></path>
+            </svg>
+            <i>(3-10-3) Interleaved PAM-3 eye diagram</i>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        <div>
+            <div>
+                <h2>Summary</h2>
+                <i>comparing traditional GDDR data bus</i>
+                <br>
+                <br>
+                16-wire, 16-bit data <span class="highlight">+ S-codes, differential signals</span> VS 16-wire, 16-bit data, <span class="highlight">standard signals</span>:
+                <li>Differential signals improvements to the <span class="underline">signal integrity</span>.</li>
+                <li>Channel’s power consumption is <span class="underline">reduced 62.5%</span></li>
+            </div>
+
+        </div>
+
+    </article>
+    <article id="contact">
+
+        <div class="wrapper"></div>
+
+        <div id="card" class="card" data-tilt>
+            <h2>trent nordyke</h2>
+            <i>circuit designer / electrical engineer</i>
+            <p>nordyke.trent@gmail.com</p>
+        </div>
+
+    </article>
+    
+  </body>
+
+</html>
