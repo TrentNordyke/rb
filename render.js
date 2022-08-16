@@ -31,9 +31,7 @@ VanillaTilt.init(cards, {
     perspective:500
 });
 
-
 let businessCard = document.querySelector('#contact .card')
-
 businessCard.addEventListener('click', (e)=>{
     navigator.clipboard.writeText('nordyke.trent@gmail.com')
     alert('copied email address: nordyke.trent@gmail.com')
@@ -82,12 +80,10 @@ window.addEventListener('scroll', ()=>{
 })
 
 function makeWave(pos, transX, freq, amp){
-    // let operator = ' '
     let d = `M `
     for (let i=0; i<500; i++){
         d += `${i},${ pos.y + Math.sin(freq * (i+pos.x)) * (amp) } `
     }
-    // console.log(d)
     return d
 }
 document.querySelector('#upper1').setAttribute("d", makeWave({x:0, y:85},0, 0.03,  65))
@@ -98,4 +94,3 @@ document.querySelector('#lower2').setAttribute("d", makeWave({x:160, y:215},0, 0
 document.querySelector('#cycle1').setAttribute("d", makeWave({x:80, y:150},0, 0.02, 130))
 document.querySelector('#cycle2').setAttribute("d", makeWave({x:183, y:150},0, 0.02, 130))
 document.querySelector('#cycle3').setAttribute("d", makeWave({x:290, y:150},0, 0.02, 130))
-// document.querySelector('#cycle2').setAttribute("d", makeWave({x:260, y:150},0, 0.015, 130))
