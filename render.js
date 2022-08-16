@@ -79,18 +79,24 @@ window.addEventListener('scroll', ()=>{
     })
 })
 
-function makeWave(pos, transX, freq, amp){
+function makeNoisyWave(pos, freq, amp){
     let d = `M `
+    let y;
     for (let i=0; i<500; i++){
-        d += `${i},${ pos.y + Math.sin(freq * (i+pos.x)) * (amp) } `
+        y = Math.sin(freq * (i+pos.x))
+        d += `${i},${ (2*Math.random()*Math.sin((0.8*i)+(2*Math.random()))*(y**2)) + pos.y + (y*amp) } `
     }
     return d
 }
-document.querySelector('#upper1').setAttribute("d", makeWave({x:0, y:85},0, 0.03,  65))
-document.querySelector('#upper2').setAttribute("d", makeWave({x:105, y:85},0, 0.03, 65))
-document.querySelector('#lower1').setAttribute("d", makeWave({x:50, y:215},0, 0.03, 65))
-document.querySelector('#lower2').setAttribute("d", makeWave({x:160, y:215},0, 0.03, 65))
+function waves(){
+    document.querySelector('#upper1').setAttribute("d", makeNoisyWave({x:0, y:85}, 0.03,  65))
+    document.querySelector('#upper2').setAttribute("d", makeNoisyWave({x:105, y:85}, 0.03, 65))
+    document.querySelector('#lower1').setAttribute("d", makeNoisyWave({x:50, y:215}, 0.03, 65))
+    document.querySelector('#lower2').setAttribute("d", makeNoisyWave({x:160, y:215}, 0.03, 65))
 
-document.querySelector('#cycle1').setAttribute("d", makeWave({x:80, y:150},0, 0.02, 130))
-document.querySelector('#cycle2').setAttribute("d", makeWave({x:183, y:150},0, 0.02, 130))
-document.querySelector('#cycle3').setAttribute("d", makeWave({x:290, y:150},0, 0.02, 130))
+    document.querySelector('#cycle1').setAttribute("d", makeNoisyWave({x:80, y:150}, 0.02, 130))
+    document.querySelector('#cycle2').setAttribute("d", makeNoisyWave({x:183, y:150}, 0.02, 130))
+    document.querySelector('#cycle3').setAttribute("d", makeNoisyWave({x:290, y:150}, 0.02, 130))
+
+}
+setInterval(waves, 200)
